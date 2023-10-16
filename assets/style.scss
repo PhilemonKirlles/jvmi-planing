@@ -1,0 +1,94 @@
+body {
+  font-family: "Lato", "Open Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.hero,
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: #eee;
+  text-align: center;
+  padding: 0 2em;
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1rem;
+  }
+  h3 {
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    opacity: 0.6;
+  }
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  z-index: 10;
+  &--top {
+    position: fixed;
+    top: 0;
+  }
+}
+
+.navTab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  color: #000;
+  letter-spacing: 0.1rem;
+  transition: all 0.5s ease;
+  font-size: 0.8rem;
+  &:hover {
+    color: white;
+    background: rgba(54, 106, 151, 0.8);
+    transition: all 0.5s ease;
+  }
+}
+
+.navTab-slider {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  background: #66b1f1;
+  transition: left 0.3s ease;
+}
+
+@media (min-width: 800px) {
+  .hero,
+  .slide {
+    h1 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+  }
+  .navTab {
+    font-size: 1rem;
+  }
+}
+
+.btn-primary {
+  font-weight: strong;
+  background-color: rgb(224, 65, 65);
+  &:hover {
+    color: rgb(224, 65, 65);
+    background: rgba(72, 253, 93, 0.595);
+    transition: all 0.5s ease;
+  }
+}
